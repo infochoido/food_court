@@ -1,17 +1,15 @@
-import { useState} from "react"
+import {useEffect} from "react"
 
-const Location=()=>{
-    const [latitude, setLatitude] = useState([]);
-    const [longitude, setLongigude] = useState([]);
-    navigator.geolocation.getCurrentPosition((position) => {
-        setLatitude(position.coords.latitude);
-        setLongigude(position.coords.longitude)
+const Location=({setLocationData})=>{
+    useEffect(()=>{ navigator.geolocation.getCurrentPosition((position) => {
+        const{latitude,longitude}= position.coords;
+        setLocationData({latitude, longitude})
         console.log(position)
-    });
+    });},[setLocationData])
+   
 
     return(
         <div>
-            <p className="text-xl">Current Location is {latitude} / {longitude}</p>
         </div>
     )
 }
