@@ -1,11 +1,11 @@
-function CheckFood({value, name, defaultChecked, disabled, onChange }) {
+function CheckFood({value, label, defaultChecked, disabled, onChange }) {
     return (
       <label>
-        {value}
+        {label}
         <input
           type="checkbox"
           value={value}
-          name={name}
+          name={label}
           defaultChecked={defaultChecked}
           disabled={disabled}
           onChange={onChange}

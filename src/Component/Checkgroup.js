@@ -1,7 +1,7 @@
 import CheckFood from "./option";
 import { useState,useEffect } from "react";
 
-function Checkgroup({ label,value }) {
+function Checkgroup({ label}) {
   const categoryList = [
     { name: '한식' },
     { name: '중식' },

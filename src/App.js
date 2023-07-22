@@ -1,9 +1,6 @@
 import Header from "./Component/header";
 import Banner from "./Component/banner";
-import Checkgroup from "./Component/Checkgroup";
-import Range from "./Component/Range";
-import CurrentLocation from "./Component/example";
-// import FoodJson from "./Component/food";
+import Option from "./Component/Options/Option";
 
 function App() {
   return (
@@ -13,13 +10,8 @@ function App() {
       <Banner />
       
       <section className="max-w-[1530px] w-[100%] m-auto p-5">
-        <CurrentLocation />
-        <Checkgroup label="음식"/>
-        <Range name="범위"/>
-        
+        <Option />
       </section>
-     
-      {/* <FoodJson /> */}
     </div>
   );
 }
