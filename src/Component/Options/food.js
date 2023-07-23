@@ -19,8 +19,8 @@ function Foodjson(props){
         }
     ,[props.clicked]);
 
-    const filterRestaurant = (category) => {
-      return restaurant.filter((data) => data.BIZ_CRTFCT_BZSTAT_NM=== category);
+    const filterRestaurant = () => {
+      return restaurant.filter((data) => props.checkFood.includes(data.BIZ_CRTFCT_BZSTAT_NM));
     };
 
 
@@ -31,8 +31,8 @@ function Foodjson(props){
             <p>loading</p>
           ) : (
             <ul>
-              {filterRestaurant("일식").map((data, index) => (
-                <li key={index}>{data.RSTR_NM}</li>
+              {filterRestaurant().map((data, index) => (
+                <li key={index} className="text-xl">{data.RSTR_NM}</li>
               ))}
             </ul>
           )
