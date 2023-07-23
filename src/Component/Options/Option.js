@@ -10,6 +10,7 @@ import CheckBoxGroup from "./Checkbox";
 const Option = () => {
     const [locationData, setLocationData] = useState({});
     const [checkFood, setCheckFood]=useState([]);
+    //check된 Food , array data임!!
     const [rangeFood,setRangeFood]=useState(0);
     //RangeFood<- Slider로 변경된 Range값변수!
     const [btnclick, setBtnclick]=useState(false);
@@ -31,6 +32,7 @@ const Option = () => {
     const onChange = (e) =>{
         setRangeFood(e.target.value)
     }
+    //Range바꾸는거
 
    
     const onBTNClick = (e) => {
@@ -38,6 +40,8 @@ const Option = () => {
         setBtnclick((prev)=>!prev);
         console.log(btnclick)
     }
+    //BTN확인버튼 제출 
+    //Problem : 버튼확인이 단순히 보이고 안보이고만 기능함 , 추가해아할듯 !
 
 
     return(
