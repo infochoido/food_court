@@ -35,9 +35,15 @@ const Option = () => {
     //Range바꾸는거
 
    
-    const onBTNClick = (e) => {
+    const onBTN1Click = (e) => {
         e.preventDefault();
-        setBtnclick((prev)=>!prev);
+        setBtnclick(true);
+        console.log(btnclick)
+    }
+
+    const onBTN2Click = (e) => {
+        e.preventDefault();
+        setBtnclick(false);
         console.log(btnclick)
     }
     //BTN확인버튼 제출 
@@ -48,12 +54,13 @@ const Option = () => {
         <div className="w-full">
                 <CurrentLocation locationData={locationData}/>
             <div className="p-5 bg-yello200 rounded-2xl">
-                <div className="flex p-3 m-3 space-x-10 rounded-2xl bg-orange200">
+                <div className="flex p-3 m-3 space-x-10 font-semibold text-m rounded-2xl bg-lightBlue text-beige">
                     <RangeFood index="범위" value={rangeFood} onChange={onChange}/>
                     <CheckBoxGroup value={["한식","일식","중식"]} onChange={handleCheckboxChange}/>
                     <p>Selected: {checkFood.join(", ")}</p>
                 </div>
-                <Button text="확인" onClick={onBTNClick}/>
+                <Button text="확인" onClick={onBTN1Click}/>
+                <Button text="취소" onClick={onBTN2Click}/>
                 <Foodjson clicked={btnclick} checkFood={checkFood}/>  
             </div>
            
