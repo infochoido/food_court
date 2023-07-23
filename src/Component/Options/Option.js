@@ -56,12 +56,12 @@ const Option = () => {
             <div className="p-5 bg-yello200 rounded-2xl">
                 <div className="flex p-3 m-3 space-x-10 font-semibold text-m rounded-2xl bg-lightBlue text-beige">
                     <RangeFood index="범위" value={rangeFood} onChange={onChange}/>
-                    <CheckBoxGroup value={["한식","일식","중식"]} onChange={handleCheckboxChange}/>
+                    <CheckBoxGroup value={["한식","일식","중식","양식"]} onChange={handleCheckboxChange}/>
                     <p>Selected: {checkFood.join(", ")}</p>
                 </div>
                 <Button text="확인" onClick={onBTN1Click}/>
                 <Button text="취소" onClick={onBTN2Click}/>
-                <Foodjson clicked={btnclick} checkFood={checkFood}/>  
+                <Foodjson clicked={btnclick} checkFood={checkFood} locationData={locationData} rangeFood={rangeFood}/>  
             </div>
            
         </div>

@@ -30,6 +30,10 @@ const CheckBoxGroup=(props)=>{
                 <label>{props.value[2]}</label>
                 <input type="checkbox" onChange={(e)=> handleCheckboxChange(e,props.value[2])}/>
             </div>
+            <div>
+                <label>{props.value[3]}</label>
+                <input type="checkbox" onChange={(e)=> handleCheckboxChange(e,props.value[3])}/>
+            </div>
         </div>
         
     )
