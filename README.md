@@ -1,3 +1,5 @@
+전라도 음식점 api를 활용하여 현재위치를 기준으로 범위와 한식,중식,일식,양식정보를 선택하면 음식점을 필터링해주는웹
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
